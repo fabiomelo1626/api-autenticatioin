@@ -19,4 +19,14 @@ import { Router, Request, Response, NextFunction, application } from "express";
     res.status(200).send(newUser);
  });
 
+usersRoute.put('/users/:uuid', (req:Request<{uuid:string}>, res:Response, next:NextFunction)=>{
+    const editUser = req.params.uuid;
+    res.status(200).send(editUser);
+})
+
+usersRoute.delete('/users/:uuid', (req:Request, res:Response, next:NextFunction)=>{
+    const deleteUser = req.params.uuid;
+    res.status(200).send(deleteUser);
+});
+
  export default usersRoute;
