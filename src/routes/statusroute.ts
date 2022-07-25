@@ -7,4 +7,5 @@ statusRoute.get('/status', (req:Request, res:Response, next:NextFunction)=>{
     res.status(200).send({foo: 'show'})
 });
 
+
 export default statusRoute;
